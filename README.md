@@ -111,18 +111,39 @@ A planilha deve conter pelo menos as seguintes colunas:
 
 
 
-📎 Sobre os Anexos
-📎 O envio de contatos está implementado como exemplo.
+## 📎 Sobre os Anexos
+
+📎 O envio de contatos está implementado como exemplo.  
 Você pode modificar o código para enviar imagens, vídeos ou outros arquivos, alterando os XPaths conforme o tipo de anexo desejado.
 
-Como encontrar o XPath de um elemento:
-Acesse o WhatsApp Web
+> 🔧 No arquivo `disparador_xpath.py`, os campos de XPath estão abertos e organizados para fácil modificação.  
+> 📄 No arquivo `xpathexample.py`, você encontra exemplos reais dos XPaths utilizados e como eles aparecem nos elementos do navegador.
 
-Pressione F12 para abrir o DevTools
+### Como encontrar o XPath de um elemento:
 
-Use o cursor de inspeção e clique no elemento desejado
+1. Acesse o [WhatsApp Web](https://web.whatsapp.com)  
+2. Com o Whats App aberto, pressione `F12` para abrir o DevTools  
+3. Use o cursor de inspeção e clique no elemento desejado  
+4. Clique com o botão direito no HTML → **Copy → Copy XPath**
 
-Clique com o botão direito no HTML → Copy → Copy XPath
+### Exemplo de uso de XPath no envio de contatos (6 etapas):
+
+1. **Clique no ícone de clipe/anexo**  
+2. **Clique na opção de envio de contato**  
+3. **Clique na caixa de busca para encontrar o contato desejado**  
+4. **Digite o nome do contato**  
+5. **Clique na caixa de envio do contato (primeiro botão de enviar)**  
+6. **Clique no segundo botão de envio (confirmação)**  
+
+🔁 Esse processo pode ser adaptado para **qualquer ação com elementos no navegador**, como:
+
+- Inserção de **emojis**
+- Envio de **imagens**
+- Envio de **vídeos**
+- Outras opções do menu do WhatsApp Web
+
+🛠️ Basta substituir os XPaths conforme o elemento desejado.
+
 
 
 
