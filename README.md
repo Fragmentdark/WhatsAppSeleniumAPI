@@ -77,6 +77,30 @@ pip install undetected-chromedriver
 pip install openpyxl
 
 
+🕵️ Recomendação de Mascaramento (VPN)
+Para reforçar a segurança da automação e reduzir riscos de detecção pelo WhatsApp, recomenda-se o uso de VPNs durante os disparos em massa.
+
+✅ Boas práticas:
+Utilize uma VPN confiável (ex: WireGuard, ProtonVPN) com plano premium para garantir estabilidade e variedade de IPs.
+
+Altere a VPN a cada 50 ou 100 disparos para dificultar a detecção por padrões de rede.
+
+Prefira IP's do mesmo país onde a conta WhatsApp está registrada, evitando bloqueios por localização suspeita.
+
+⚙️ Automação Avançada (para usuários técnicos):
+Você pode automatizar a troca de VPNs utilizando scripts .bat (no Windows) para alternar entre túneis do WireGuard ou perfis do OpenVPN. Exemplo de fluxo:
+
+bat
+Copiar
+Editar
+@echo off
+REM Script para alternar perfis WireGuard
+wireguard.exe /uninstalltunnel nome_do_tunel_atual
+timeout /t 5
+wireguard.exe /installtunnel nome_do_tunel_novo
+Dica: Programe esses scripts para serem executados automaticamente via schedule, cron, ou comandos embutidos no seu fluxo de envio.
+
+
 ## 📎 Links Úteis e Contato
 
 ⚙️ WebDriver
