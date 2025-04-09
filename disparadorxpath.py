@@ -228,3 +228,8 @@ for index, row in df.iterrows():
         if erros_consecutivos >= 5:
             atualizar_relatorio("ALERTA: Muitos erros consecutivos! Possível bloqueio do WhatsApp.")
             break  # Sai do loop principal
+
+        atualizar_relatorio("Todos os contatos foram processados com sucesso ")
+        print("Envios concluídos")
+        time.sleep(30)
+        driver.quit()
