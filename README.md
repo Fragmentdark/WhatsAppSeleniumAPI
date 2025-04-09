@@ -41,7 +41,6 @@ Automatize o envio de mensagens, contatos, imagens ou outros anexos via WhatsApp
 
 ## 🧪 Instalações Necessárias
 
-```bash
 # Instale o Python
 sudo apt install python3
 
