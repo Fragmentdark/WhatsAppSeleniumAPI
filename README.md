@@ -26,28 +26,40 @@ Automatize o envio de mensagens, contatos, imagens ou outros anexos via WhatsApp
 
 ---
 
-## 🧰 Requisitos Técnicos
+## 🧰 Requisitos Técnicos (WINDOWS 10 ou 11 64bits)
 
 | Item                   | Recomendado                          |
 |------------------------|--------------------------------------|
 | Processador            | Intel Core i3 (3ª geração ou superior) |
 | Memória RAM            | 12 GB DDR4                           |
-| Armazenamento          | SSD com sistema operacional          |
+| Armazenamento          | SSD com sistema operacional Windows 10|
 | Navegador              | Google Chrome (versão compatível)    |
 | Planilha Excel         | `.xlsx` com os contatos              |
 | Editor de código       | Visual Studio Code                   |
+
+5 GB de Armazenamento no diretório
 
 ---
 
 ## 🧪 Instalações Necessárias
 
 # Instale o Python
-sudo apt install python3
 
-# Instale o gerenciador de pacotes pip
-sudo apt install python3-pip
+Acesse: [Acessar Python](https://www.python.org/downloads/windows/)
 
-# Instale bibliotecas utilizadas
+Baixe a versão mais recente.
+
+Na instalação, marque a opção “Add Python to PATH”.
+
+Depois de instalar, abra o CMD e digite:
+
+python --version
+
+Se retornar algo como Python 3.x.x, está tudo certo.
+
+
+# Instale bibliotecas utilizadas (Terminal do VS Code)
+
 pip install pandas
 pip install selenium
 pip install undetected-chromedriver
