@@ -74,12 +74,16 @@ ________________________________________________________________________________
 
 ⚙️ WebDriver
 
+
+
 🔗 Baixe o ChromeDriver compatível com a sua versão do Google Chrome:
 
 👉 [Acessar ChromeDriver](https://chromedriver.chromium.org/downloads)
 
 Após o download, extraia o executável no diretório do seu código
 ou especifique o caminho diretamente no script.
+
+
 
 📄 Estrutura da Planilha
 A planilha deve conter pelo menos as seguintes colunas:
@@ -88,6 +92,8 @@ Nome	Tel_1
 João Silva	5511999999999
 Maria Luz	5599999999999
 O número deve estar no formato internacional: 55 (Brasil) + DDD + número.
+
+
 
 🚀 Funcionalidades do Script
 ✅ Envio automático de mensagens personalizadas
@@ -102,6 +108,9 @@ O número deve estar no formato internacional: 55 (Brasil) + DDD + número.
 
 ✅ Contador de erros com encerramento automático após 5 falhas seguidas
 
+
+
+
 📎 Sobre os Anexos
 📎 O envio de contatos está implementado como exemplo.
 Você pode modificar o código para enviar imagens, vídeos ou outros arquivos, alterando os XPaths conforme o tipo de anexo desejado.
@@ -114,6 +123,11 @@ Pressione F12 para abrir o DevTools
 Use o cursor de inspeção e clique no elemento desejado
 
 Clique com o botão direito no HTML → Copy → Copy XPath
+
+
+
+
+
 
 🧠 Boas Práticas Anti-Banimento
 
@@ -134,6 +148,8 @@ Estratégia	Descrição
 📊 Relatório de Envio
 
 
+
+
 Ao final do processo, um arquivo .txt será gerado com:
 
 ✅ Lista de contatos enviados com sucesso
@@ -151,13 +167,22 @@ Não nos responsabilizamos por banimentos ou mau uso da ferramenta.
 🤝 Contribuição
 Use, estude, melhore e compartilhe este projeto com a comunidade.
 
+
+
+
+
 Para sugestões, melhorias ou bugs, sinta-se à vontade para abrir uma Issue.
+
+
+
 
 ## 📬 Entre em contato
 
 - 📧 **Email:** [contato@jenovatech.com.br](mailto:contato@jenovatech.com.br)  
 - 🔗 **LinkedIn:** [linkedin.com/in/reinaldosilveiratech](https://www.linkedin.com/in/reinaldosilveiratech)  
 - 📷 **Instagram:** [@jenovatech](https://www.instagram.com/jenovatech/?igsh=MW9zaGsyNGMzazgycA%3D%3D)
+
+
 
 ---
 
