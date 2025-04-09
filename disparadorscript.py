@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains 
 
-# --- Função para mover o mouse 
+#Função para mover o mouse 
 def mover_mouse(driver):
     try:
         actions = ActionChains(driver)
@@ -34,24 +34,24 @@ mensagens = mensagens = [
     "Olá! Esta é uma mensagem automática enviada via Python e Selenium.",
 ]
 
-# Configurações de disfarce e privacidade
+# Configurações de disfarce e privacidade (navegadores diferentes em random a cada sessão)
 USER_AGENTS = [
-    # Chrome no Windows
+   
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     
-    # Firefox no Windows
+  
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:110.0) Gecko/20100101 Firefox/110.0",
     
-    # Microsoft Edge no Windows
+   
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/119.0.0.0 Safari/537.36",
     
-    # Opera no Windows
+  
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/90.0.0.0 Safari/537.36",
     
-    # Chrome no Mac
+
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     
-    # Firefox no Mac
+
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13.1; rv:109.0) Gecko/20100101 Firefox/109.0",
     
 ]
@@ -102,7 +102,7 @@ mover_mouse(driver)  # Movimento inicial para simular humano
 df = pd.read_excel(caminho_planilha)
 
 if 'Tel_1' not in df.columns:
-    atualizar_relatorio("❌ ERRO: A planilha deve conter a coluna 'Tel_1' com os números de telefone.")
+    atualizar_relatorio("ERRO: A planilha deve conter a coluna 'Tel_1' com os números de telefone.")
     driver.quit()
     exit()
 
@@ -140,9 +140,9 @@ for index, row in df.iterrows():
         time.sleep(random.uniform(0.5, 1.0))  # Pequena pausa antes de enviar
         caixa_de_texto.send_keys(Keys.ENTER)  # Envia a mensagem
 
-        atualizar_relatorio(f"📩 Mensagem enviada para {numero_destino}")
+        atualizar_relatorio(f"Mensagem enviada para {numero_destino}")
 
-        contatos_enviados += 1  # ✅ Atualiza o contador de mensagens enviadas
+        contatos_enviados += 1  # Atualiza o contador de mensagens enviadas
 
         time.sleep(random.uniform(3, 6))  # Tempo antes de enviar o contato
 
@@ -153,15 +153,15 @@ for index, row in df.iterrows():
 
         # Pausa após 50 envios bem-sucedidos
         if contador_mensagens % 50 == 0:
-            atualizar_relatorio("⏳ Pausando por 1-2 minutos após 50 envios bem-sucedidos...")
+            atualizar_relatorio("Pausando por 1-2 minutos após 50 envios bem-sucedidos...")
             time.sleep(random.randint(60, 120))
 
     except Exception as e:
-        atualizar_relatorio(f"❌ Erro ao enviar mensagem para {numero_destino}: {e}")
+        atualizar_relatorio(f"Erro ao enviar mensagem para {numero_destino}: {e}")
         contatos_erro += 1
         erros_consecutivos += 1  # Aumenta o contador de erros consecutivos
         time.sleep(10)
 
         if erros_consecutivos >= 5:
-            atualizar_relatorio("⛔ ALERTA: Muitos erros consecutivos! Possível bloqueio do WhatsApp.")
+            atualizar_relatorio("ALERTA: Muitos erros consecutivos! Possível bloqueio do WhatsApp.")
             break  # Sai do loop principal

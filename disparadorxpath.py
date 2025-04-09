@@ -34,24 +34,24 @@ mensagens = mensagens = [
     "Olá! Esta é uma mensagem automática enviada via Python e Selenium.",
 ]
 
-# Configurações de disfarce e privacidade
+# Configurações de disfarce e privacidade (navegadores diferentes em random a cada sessão)
 USER_AGENTS = [
-    # Chrome no Windows
+    
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     
-    # Firefox no Windows
+   
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:110.0) Gecko/20100101 Firefox/110.0",
     
-    # Microsoft Edge no Windows
+    
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/119.0.0.0 Safari/537.36",
     
-    # Opera no Windows
+   
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Opera/90.0.0.0 Safari/537.36",
     
-    # Chrome no Mac
+    
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     
-    # Firefox no Mac
+    
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 13.1; rv:109.0) Gecko/20100101 Firefox/109.0",
     
 ]
@@ -102,7 +102,7 @@ mover_mouse(driver)  # Movimento inicial para simular humano
 df = pd.read_excel(caminho_planilha)
 
 if 'Tel_1' not in df.columns:
-    atualizar_relatorio("❌ ERRO: A planilha deve conter a coluna 'Tel_1' com os números de telefone.")
+    atualizar_relatorio("ERRO: A planilha deve conter a coluna 'Tel_1' com os números de telefone.")
     driver.quit()
     exit()
 
@@ -111,7 +111,7 @@ if 'Tel_1' not in df.columns:
 def enviar_contato(driver, nome_do_contato):
     try:
         # 1. Clicar no botão de "Anexar" (ícone de clipe na parte inferior direita da conversa) ou inspencionar em cima do anexar, depois com o botão direito do mouse no elemento e copie o xpath (Cut))
-        # 🔧 Substitua o XPATH abaixo conforme o elemento correspondente no WhatsApp Web atual
+        # Substitua o XPATH abaixo conforme o elemento correspondente no WhatsApp Web atual
         botao_anexo = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, 'XPATH_DO_BOTAO_ANEXAR'))
         )
@@ -119,7 +119,7 @@ def enviar_contato(driver, nome_do_contato):
         time.sleep(random.uniform(3, 5))
 
         # 2. Selecionar a opção "Contato" no menu de anexos (Clique F12 passe o mouse em cima da opção contatos, indentifique o elemento, cut e copie o xpath)
-        # 🔧 Este item geralmente aparece como "Contato" em texto. Use contains(text(), "Contato") ou semelhante
+        # Este item geralmente aparece como "Contato" em texto. Use contains(text(), "Contato") ou semelhante
         opcao_contato = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, 'XPATH_DA_OPCAO_CONTATO'))
         )
@@ -127,7 +127,7 @@ def enviar_contato(driver, nome_do_contato):
         time.sleep(random.uniform(3, 5))
 
         # 3. Localizar o campo de busca de contatos (o campo de busca para o nome do contato)
-        # 🔧 Geralmente é um campo com 'data-testid="search-input"' ou algo semelhante
+        # Geralmente é um campo com 'data-testid="search-input"' ou algo semelhante
         campo_pesquisa = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, 'XPATH_DO_CAMPO_PESQUISA_CONTATO'))
         )
@@ -138,7 +138,7 @@ def enviar_contato(driver, nome_do_contato):
         time.sleep(random.uniform(2, 3))
 
         # 5. Selecionar o contato listado no resultado da busca
-        # 🔧 Normalmente é o primeiro elemento da lista com role="option"
+        # Normalmente é o primeiro elemento da lista ao aparecer o contato
         resultado = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, 'XPATH_DO_RESULTADO_CONTATO'))
         )
@@ -146,7 +146,7 @@ def enviar_contato(driver, nome_do_contato):
         time.sleep(random.uniform(2, 3))
 
         # 6. Clicar no primeiro botão de "Enviar" (inspencionar no peimeiro botão de envio)
-        # 🔧 Ícone de envio (paper plane) dentro do modal de compartilhamento
+        # Ícone de envio (paper plane) dentro do modal de compartilhamento
         botao_enviar_1 = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, 'XPATH_DO_PRIMEIRO_BOTAO_ENVIAR'))
         )
@@ -154,18 +154,18 @@ def enviar_contato(driver, nome_do_contato):
         time.sleep(random.uniform(2, 3))
 
         # 7. Confirmar o envio clicando no segundo botão de "Enviar" (inspencionar no segundo botão de envio)
-        # 🔧 Segundo botão geralmente aparece para confirmação de envio do contato
+        # Segundo botão geralmente aparece para confirmação de envio do contato
         botao_enviar_2 = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, 'XPATH_DO_SEGUNDO_BOTAO_ENVIAR'))
         )
         botao_enviar_2.click()
         time.sleep(random.uniform(2, 3))
 
-        # ✅ Atualiza o log
-        atualizar_relatorio(f"✅ Contato '{nome_do_contato}' enviado com sucesso!")
+        # Atualiza o log
+        atualizar_relatorio(f"Contato '{nome_do_contato}' enviado com sucesso!")
 
     except Exception as e:
-        atualizar_relatorio(f"❌ Erro ao enviar o contato '{nome_do_contato}': {e}")
+        atualizar_relatorio(f"Erro ao enviar o contato '{nome_do_contato}': {e}")
 
 
     # Inicializa os contadores
@@ -202,9 +202,9 @@ for index, row in df.iterrows():
         time.sleep(random.uniform(0.5, 1.0))  # Pequena pausa antes de enviar
         caixa_de_texto.send_keys(Keys.ENTER)  # Envia a mensagem
 
-        atualizar_relatorio(f"📩 Mensagem enviada para {numero_destino}")
+        atualizar_relatorio(f"Mensagem enviada para {numero_destino}")
 
-        contatos_enviados += 1  # ✅ Atualiza o contador de mensagens enviadas
+        contatos_enviados += 1  # Atualiza o contador de mensagens enviadas
 
         time.sleep(random.uniform(3, 6))  # Tempo antes de enviar o contato
         enviar_contato_(nome_do_contato)(driver)  # Passando o driver como argumento
@@ -216,15 +216,15 @@ for index, row in df.iterrows():
 
         # Pausa após 50 envios bem-sucedidos
         if contador_mensagens % 50 == 0:
-            atualizar_relatorio("⏳ Pausando por 1-2 minutos após 50 envios bem-sucedidos...")
+            atualizar_relatorio("Pausando por 1-2 minutos após 50 envios bem-sucedidos...")
             time.sleep(random.randint(60, 120))
 
     except Exception as e:
-        atualizar_relatorio(f"❌ Erro ao enviar mensagem para {numero_destino}: {e}")
+        atualizar_relatorio(f"Erro ao enviar mensagem para {numero_destino}: {e}")
         contatos_erro += 1
         erros_consecutivos += 1  # Aumenta o contador de erros consecutivos
         time.sleep(10)
 
         if erros_consecutivos >= 5:
-            atualizar_relatorio("⛔ ALERTA: Muitos erros consecutivos! Possível bloqueio do WhatsApp.")
+            atualizar_relatorio("ALERTA: Muitos erros consecutivos! Possível bloqueio do WhatsApp.")
             break  # Sai do loop principal

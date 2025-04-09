@@ -26,7 +26,7 @@ def enviar_contato_contato(driver):
         time.sleep(random.uniform(3, 6))
 
         # Selecionar o contato encontrado
-        contato_paradise_castle = WebDriverWait(driver, 20).until(
+        enviar_contato_contato = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div[2]/div'))
         )
         contato_paradise_castle.click()
@@ -47,8 +47,8 @@ def enviar_contato_contato(driver):
         time.sleep(random.uniform(3, 6))
 
         # Atualizar o relatório com o sucesso
-        atualizar_relatorio("✅ Contato do Paradise Castle enviado com sucesso!")
+        atualizar_relatorio("Contato enviado com sucesso!")
 
     except Exception as e:
         # Atualizar o relatório com o erro
-        atualizar_relatorio(f"❌ Erro ao enviar o contato do Paradise Castle: {e}")
+        atualizar_relatorio(f"Erro ao enviar o contato: {e}")
