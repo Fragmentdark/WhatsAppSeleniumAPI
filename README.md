@@ -61,8 +61,11 @@ Se retornar algo como Python 3.x.x, está tudo certo.
 # Instale bibliotecas utilizadas (Terminal do VS Code)
 
 pip install pandas
+
 pip install selenium
+
 pip install undetected-chromedriver
+
 pip install openpyxl
 
 ____________________________________________________________________________________________________________________________________________________________________________________________________________
