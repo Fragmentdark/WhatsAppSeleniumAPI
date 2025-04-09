@@ -101,14 +101,24 @@ Use o cursor de inspeção e clique no elemento desejado
 Clique com o botão direito no HTML → Copy → Copy XPath
 
 🧠 Boas Práticas Anti-Banimento
+
 Estratégia	Descrição
+
 ⏱️ Delay entre envios	Pausa aleatória de 30 a 40 segundos entre cada mensagem
+
 ⏸️ Pausa entre lotes	Pausa de 1 a 2 minutos a cada 50 envios bem-sucedidos
+
 👁️ Simulação de digitação	O texto é digitado letra por letra, imitando comportamento humano
+
 🚫 Evite links	Mensagens com links aumentam o risco de SPAM
+
 ☎️ Use chip já utilizado	Números novos são mais vulneráveis a bloqueios
+
 🛑 Tolerância de erros	O script é interrompido após 5 falhas consecutivas
+
 📊 Relatório de Envio
+
+
 Ao final do processo, um arquivo .txt será gerado com:
 
 ✅ Lista de contatos enviados com sucesso
