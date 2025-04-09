@@ -32,6 +32,17 @@ O projeto simula comportamentos humanos para reduzir as chances de detecção pe
 > Assim que o WhatsApp conectar, pressione `Enter` novamente no terminal para iniciar o disparo das mensagens.
 
 
+## 🚀 Funcionalidades do Script
+
+- ✅ Envio automático de mensagens personalizadas  
+- ✅ Suporte a anexos (como contatos, imagens e vídeos)  
+- ✅ Geração de relatório `.txt` com status de envio com data e horário  
+- ✅ Simulação de digitação humana  
+- ✅ Pausas estratégicas para evitar banimentos  
+- ✅ Contador de erros com encerramento automático após 5 falhas seguidas
+
+
+
 ---
 
 ## 🧰 Requisitos Técnicos (WINDOWS 10 ou 11 64bits)
@@ -118,19 +129,6 @@ A planilha deve conter pelo menos as seguintes colunas:
 | Maria Luz   | 5599999999999  |
 
 > O número deve estar no formato internacional: 55 (Brasil) + DDD + número.
-
-
-
-
-## 🚀 Funcionalidades do Script
-
-- ✅ Envio automático de mensagens personalizadas  
-- ✅ Suporte a anexos (como contatos, imagens e vídeos)  
-- ✅ Geração de relatório `.txt` com status de envio  
-- ✅ Simulação de digitação humana  
-- ✅ Pausas estratégicas para evitar banimentos  
-- ✅ Contador de erros com encerramento automático após 5 falhas seguidas
-
 
 
 
