@@ -187,15 +187,18 @@ Você pode modificar o código para enviar imagens, vídeos ou outros arquivos, 
 
 
 
-## 📊 Relatório de Envio
+### 📊 Relatório de Envio
 
-Ao final do processo, um arquivo `.txt` será gerado com:
+Ao final do processo, um arquivo `.txt` será gerado com as seguintes informações:
 
-- ✅ Lista de contatos enviados com sucesso  
-- ❌ Lista de falhas  
-- 📤 Mensagens/script enviados  
+- ✅ **Lista de contatos enviados com sucesso**
+- ❌ **Lista de falhas**
+- 📤 **Mensagens/script enviados**
 
-Esse relatório pode ser utilizado para controle interno ou estatísticas.
+Além disso, o relatório inclui a **data e o horário exato** de cada envio, permitindo uma gestão mais eficiente e precisa das ações realizadas.
+
+Esse relatório pode ser utilizado para **controle interno**, **estatísticas**, ou mesmo como **comprovante de execução** em ambientes profissionais.
+
 
 ---
 
