@@ -12,19 +12,22 @@ Automatize o envio de mensagens, contatos, imagens ou outros anexos via WhatsApp
 
 ---
 
-## 📌 Sobre o Projeto
+### 📌 Sobre o Projeto
 
 Este repositório contém dois códigos distintos:
 
-- **Script com envio simples**: Envia apenas mensagens para os contatos.
-- **Script com anexos** (como contatos, imagens, vídeos): Utiliza XPath customizável para anexar arquivos ou informações.
+- **Script com envio simples:** Envia apenas mensagens para os contatos.
+- **Script com anexos (como contatos, imagens, vídeos):** Utiliza XPath customizável para anexar arquivos ou informações.
 
 O projeto simula comportamentos humanos para reduzir as chances de detecção pelo WhatsApp:
 
-- ⏱️ Intervalos aleatórios entre envios (30 a 40 segundos)
-- ⏸️ Pausa a cada 50 envios (1 a 2 minutos)
-- 👁️ Digitação simulada (sem uso de `.send_keys(Keys.ENTER)` diretamente)
-- 🛑 Parada automática após 5 erros consecutivos (proteção contra ban)
+- ⏱️ **Intervalos aleatórios** entre envios (30 a 40 segundos)
+- ⏸️ **Pausa automática** a cada 50 envios (1 a 2 minutos)
+- 👁️ **Digitação simulada** (sem uso direto de `.send_keys(Keys.ENTER)`)
+- 🛑 **Parada automática** após 5 erros consecutivos (proteção contra banimento)
+
+> 🧠 **Dica de segurança:** Crie e varie seus próprios scripts sempre que possível. Mude trechos do código, nomes de variáveis e estilos de envio (mesmo mantendo lógica randômica) para evitar que seu padrão seja identificado como automação. A diversidade entre scripts é uma forma eficaz de mascarar o comportamento automatizado.
+
 
 > ▶️ **Execução do script:**  
 > Após rodar o código no terminal e pressionar `Enter`, o navegador Google Chrome será aberto automaticamente.  
