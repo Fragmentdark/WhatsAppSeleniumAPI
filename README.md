@@ -68,7 +68,6 @@ pip install undetected-chromedriver
 
 pip install openpyxl
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________
 
 ## 📎 Links Úteis e Contato
 
@@ -85,28 +84,29 @@ ou especifique o caminho diretamente no script.
 
 
 
-📄 Estrutura da Planilha
+## 📄 Estrutura da Planilha
+
 A planilha deve conter pelo menos as seguintes colunas:
 
-Nome	Tel_1
-João Silva	5511999999999
-Maria Luz	5599999999999
-O número deve estar no formato internacional: 55 (Brasil) + DDD + número.
+| Nome        | Tel_1          |
+|-------------|----------------|
+| João Silva  | 5511999999999  |
+| Maria Luz   | 5599999999999  |
+
+> O número deve estar no formato internacional: 55 (Brasil) + DDD + número.
 
 
 
-🚀 Funcionalidades do Script
-✅ Envio automático de mensagens personalizadas
 
-✅ Suporte a anexos (como contatos, imagens e vídeos)
+## 🚀 Funcionalidades do Script
 
-✅ Geração de relatório .txt com status de envio
+- ✅ Envio automático de mensagens personalizadas  
+- ✅ Suporte a anexos (como contatos, imagens e vídeos)  
+- ✅ Geração de relatório `.txt` com status de envio  
+- ✅ Simulação de digitação humana  
+- ✅ Pausas estratégicas para evitar banimentos  
+- ✅ Contador de erros com encerramento automático após 5 falhas seguidas
 
-✅ Simulação de digitação humana
-
-✅ Pausas estratégicas para evitar banimentos
-
-✅ Contador de erros com encerramento automático após 5 falhas seguidas
 
 
 
@@ -129,43 +129,44 @@ Clique com o botão direito no HTML → Copy → Copy XPath
 
 
 
-🧠 Boas Práticas Anti-Banimento
+## 🧠 Boas Práticas Anti-Banimento
 
-Estratégia	Descrição
-
-⏱️ Delay entre envios	Pausa aleatória de 30 a 40 segundos entre cada mensagem
-
-⏸️ Pausa entre lotes	Pausa de 1 a 2 minutos a cada 50 envios bem-sucedidos
-
-👁️ Simulação de digitação	O texto é digitado letra por letra, imitando comportamento humano
-
-🚫 Evite links	Mensagens com links aumentam o risco de SPAM
-
-☎️ Use chip já utilizado	Números novos são mais vulneráveis a bloqueios
-
-🛑 Tolerância de erros	O script é interrompido após 5 falhas consecutivas
-
-📊 Relatório de Envio
+| Estratégia               | Descrição                                                                 |
+|--------------------------|---------------------------------------------------------------------------|
+| ⏱️ Delay entre envios     | Pausa aleatória de 30 a 40 segundos entre cada mensagem                  |
+| ⏸️ Pausa entre lotes      | Pausa de 1 a 2 minutos a cada 50 envios bem-sucedidos                    |
+| 👁️ Simulação de digitação | O texto é digitado letra por letra, imitando comportamento humano         |
+| 🚫 Evite links            | Mensagens com links aumentam o risco de SPAM                             |
+| ☎️ Use chip já utilizado  | Números novos são mais vulneráveis a bloqueios                           |
+| 🛑 Tolerância de erros     | O script é interrompido automaticamente após 5 falhas consecutivas        |
 
 
 
 
-Ao final do processo, um arquivo .txt será gerado com:
 
-✅ Lista de contatos enviados com sucesso
+## 📊 Relatório de Envio
 
-❌ Lista de falhas
+Ao final do processo, um arquivo `.txt` será gerado com:
 
-📤 Mensagens/script enviados
+- ✅ Lista de contatos enviados com sucesso  
+- ❌ Lista de falhas  
+- 📤 Mensagens/script enviados  
 
 Esse relatório pode ser utilizado para controle interno ou estatísticas.
 
-👨‍💻 Responsabilidade
-Este projeto é fornecido somente para fins educacionais e testes.
-Não nos responsabilizamos por banimentos ou mau uso da ferramenta.
+---
 
-🤝 Contribuição
+## 👨‍💻 Responsabilidade
+
+Este projeto é fornecido somente para fins educacionais e testes.  
+**Não nos responsabilizamos por banimentos ou mau uso da ferramenta.**
+
+---
+
+## 🤝 Contribuição
+
 Use, estude, melhore e compartilhe este projeto com a comunidade.
+
 
 
 
