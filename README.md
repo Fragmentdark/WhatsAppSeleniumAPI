@@ -91,7 +91,7 @@ Para reforçar a segurança da automação e reduzir riscos de detecção pelo W
 
 Você pode automatizar a troca de VPNs utilizando scripts `.bat` (no Windows) para alternar entre túneis do **WireGuard** ou perfis do **OpenVPN**. Exemplo de fluxo:
 
-```bat
+bat
 @echo off
 REM Script para alternar perfis WireGuard
 wireguard.exe /uninstalltunnel nome_do_tunel_atual
