@@ -120,11 +120,5 @@ Esse relatório pode ser utilizado para fins estatísticos ou controle de campan
 🤝 Contribuição
 Fique à vontade para usar, estudar, melhorar e compartilhar este projeto com outros desenvolvedores ou pessoas interessadas em automação.
 
-📱 Contato
-
-**Email:** [contato@jenovatech.com.br](mailto:contato@jenovatech.com.br)  
-**LinkedIn:** [Visite meu perfil no LinkedIn](https://www.linkedin.com/in/reinaldosilveiratech)  
-**Instagram:** [Siga-me no Instagram](https://www.instagram.com/jenovatech/?igsh=MW9zaGsyNGMzazgycA%3D%3D#)
-
 ⭐ Se você gostou do projeto, deixe uma estrela e compartilhe com a comunidade!
 
