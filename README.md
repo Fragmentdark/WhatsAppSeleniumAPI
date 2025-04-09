@@ -45,7 +45,7 @@ Automatize o envio de mensagens, contatos, imagens ou outros anexos via WhatsApp
 
 # Instale o Python
 
-Acesse: [](https://www.python.org/downloads/windows/)
+Acesse: [Python](https://www.python.org/downloads/windows/)
 
 Baixe a versão mais recente.
 
